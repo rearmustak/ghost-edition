@@ -3,7 +3,7 @@ name: Deploy Theme
 on:
   push:
     branches:
-      - v4-migration
+      - main
   workflow_dispatch:
 
 jobs:
