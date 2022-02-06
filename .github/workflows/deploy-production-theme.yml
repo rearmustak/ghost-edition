@@ -1,6 +1,9 @@
 name: Deploy Production Theme
 
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -9,7 +12,7 @@ jobs:
     environment: production
     steps:
       - uses: actions/checkout@v2
-      
+
       - uses: TryGhost/action-deploy-theme@v1.4.1
         with:
           api-url: ${{ secrets.GHOST_ADMIN_API_URL }}
